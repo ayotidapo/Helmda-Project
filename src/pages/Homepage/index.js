@@ -13,6 +13,10 @@ const HomePageWrapper = styled.div`
   background-position: 50% 100%;
   background-size: contain;
   background-repeat: no-repeat, repeat;
+
+  @media (max-width: 1037px) {
+    background-position: 100% 100%;
+  }
 `;
 
 const HomeContentDiv = styled.div`
@@ -27,17 +31,30 @@ const HomeContentDiv = styled.div`
     text-align: center;
     font-weight: bolder;
     margin-top: 25px;
+
+
+   
     span {
       transform: translateY(35px);
       font-size: 2rem;
       display: inline-block;
       opacity: 0.5;
+
+      @media (max-width: 768px) {
+        transform: translateY(96px);
+      }
+    
     }
     h2 {
       font-size: 9.5rem;
       margin-top: 0px;
       margin-bottom: 0px;
       line-height:180.58px;
+
+      @media (max-width: 768px) {
+        margin-top:50px;
+        font-size: 6.5rem;
+      }
     }
   }
   .brand-logo-div {
@@ -46,7 +63,12 @@ const HomeContentDiv = styled.div`
     top: 105px;
     left: 70px;
     position: absolute;
-    
+
+    @media (max-width: 768px) {
+       top: 144px;
+       left: 9px;
+    }
+     
   }
   .discover-btn-div {
     display: flex;

@@ -1,10 +1,9 @@
 {
-  "name": "eyowo-checkout-frontend-v3",
+  "name": "helmda-project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "classnames": "^2.3.1",
-    "history": "^5.2.0",
     "node-sass": "^4.14.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

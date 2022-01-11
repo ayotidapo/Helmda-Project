@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useHistory } from 'react-router';
+
 const ImgLinkWrapper = styled.div`
   position: relative;
 
@@ -34,14 +35,21 @@ const ImgLinkWrapper = styled.div`
 
 const ImgLink = (props) => {
   const history = useHistory();
-  const { imgName } = props;
+  console.log(history);
+  const { imgName, onToggleMenu } = props;
   return (
     <ImgLinkWrapper>
       <img
         src={`https://raw.githubusercontent.com/ayotidapo/Helmda-graphics/main/${imgName}.png`}
         alt="logo"
       ></img>
-      <div className="simulate" onClick={() => history.push('/about-us')}></div>
+      <div
+        className="simulate"
+        onClick={() => {
+          onToggleMenu();
+          history.push('/about-us');
+        }}
+      ></div>
     </ImgLinkWrapper>
   );
 };

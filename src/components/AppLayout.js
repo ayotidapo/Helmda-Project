@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 import { useState } from 'react';
 import classnames from 'classnames';
-
 import PopUp from 'components/PopUp';
+import { Link } from 'react-router-dom';
 import MenuPage from 'pages/MenuPage';
 
 const Navbar = styled.div`
   height: 57.68px;
-  background: #000;
   position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: calc(100% - 40px);
   z-index: 500000005;
+  background-color: transparent;
   .logo-div {
     width: 95px;
     height: 100%;
@@ -75,33 +75,35 @@ const AppWrapper = styled.div`
 const AppLayout = ({ children }) => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
-  const onShowMenu = () => {
-    setToggleMenu((prevVal) => setToggleMenu(!prevVal));
+  const onToggleMenu = () => {
+    setToggleMenu((prevVal) => !prevVal);
   };
 
   return (
     <AppWrapper>
       <PopUp isOpen={toggleMenu}>
-        <MenuPage />
+        <MenuPage onToggleMenu={onToggleMenu} />
       </PopUp>
-      <Navbar>
-        <div className="logo-div">
-          <img
-            src="https://raw.githubusercontent.com/ayotidapo/Helmda-graphics/main/logo.png"
-            alt="logo"
-          ></img>
-        </div>
-        <div
-          className={classnames('hamburger hand', {
-            'hamburger-click': toggleMenu,
-          })}
-          onClick={onShowMenu}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </Navbar>
+      <Link to="/">
+        <Navbar>
+          <div className="logo-div">
+            <img
+              src="https://raw.githubusercontent.com/ayotidapo/Helmda-graphics/main/logo.png"
+              alt="logo"
+            ></img>
+          </div>
+          <div
+            className={classnames('hamburger hand', {
+              'hamburger-click': toggleMenu,
+            })}
+            onClick={onToggleMenu}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </Navbar>
+      </Link>
       <main>{children}</main>
     </AppWrapper>
   );
