@@ -13,7 +13,7 @@ const AboutWrapper = styled.div`
   background-size: contain;
   background-repeat: no-repeat, repeat;
   h2 {
-    font-size: 2.4rem;
+    font-size: 4.4rem;
     text-align: center;
   }
   .contact {
