@@ -56,6 +56,10 @@ const HomeContentDiv = styled.div`
         margin-top:50px;
         font-size: 6.5rem;
       }
+      @media (max-width: 395px) {
+        font-size: 4.5rem;
+        
+      }
     }
   }
   .brand-logo-div {
@@ -65,17 +69,21 @@ const HomeContentDiv = styled.div`
     left: 70px;
     position: absolute;
     @media (max-width: 820px) { 
-      width: 55%;  
+      width: 291px; 
     }
 
     @media (max-width: 768px) {  
-        
+      width: 266px; 
        top: 144px;
        left: 26px;
     }
      
     @media(max-width:425){
       width: 250px;
+    
+    }
+    @media(max-width:395px){
+      left: -17px;
     }
   }
   .discover-btn-div {
