@@ -52,6 +52,7 @@ const HomeContentDiv = styled.div`
       line-height:180.58px;
 
       @media (max-width: 768px) {
+        font-size: 5.5rem;
         margin-top:50px;
         font-size: 6.5rem;
       }
@@ -63,12 +64,19 @@ const HomeContentDiv = styled.div`
     top: 105px;
     left: 70px;
     position: absolute;
+    @media (max-width: 820px) { 
+      width: 55%;  
+    }
 
-    @media (max-width: 768px) {
+    @media (max-width: 768px) {  
+        
        top: 144px;
-       left: 9px;
+       left: 26px;
     }
      
+    @media(max-width:425){
+      width: 250px;
+    }
   }
   .discover-btn-div {
     display: flex;
