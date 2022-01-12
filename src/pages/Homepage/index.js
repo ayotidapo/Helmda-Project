@@ -68,8 +68,13 @@ const HomeContentDiv = styled.div`
     top: 105px;
     left: 70px;
     position: absolute;
-    @media (max-width: 820px) { 
+    /* @media (max-width: 1152px) { 
       width: 291px; 
+    } */
+    
+    @media (max-width: 1024px) { 
+      width: 291px; 
+      left: 110px;
     }
 
     @media (max-width: 768px) {  
