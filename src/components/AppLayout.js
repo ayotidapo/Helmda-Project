@@ -84,26 +84,28 @@ const AppLayout = ({ children }) => {
       <PopUp isOpen={toggleMenu}>
         <MenuPage onToggleMenu={onToggleMenu} />
       </PopUp>
-      <Link to="/">
-        <Navbar>
+
+      <Navbar>
+        <Link to="/">
           <div className="logo-div">
             <img
               src="https://raw.githubusercontent.com/ayotidapo/Helmda-graphics/main/logo.png"
               alt="logo"
-            ></img>
+            />
           </div>
-          <div
-            className={classnames('hamburger hand', {
-              'hamburger-click': toggleMenu,
-            })}
-            onClick={onToggleMenu}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </Navbar>
-      </Link>
+        </Link>
+        <div
+          className={classnames('hamburger hand', {
+            'hamburger-click': toggleMenu,
+          })}
+          onClick={onToggleMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </Navbar>
+
       <main>{children}</main>
     </AppWrapper>
   );
